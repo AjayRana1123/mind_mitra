@@ -12,7 +12,7 @@ export default function Analytics({ user }) {
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/history/${user.uid}`);
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/history/${user.uid}`);
         setHistory(response.data);
       } catch (error) {
         console.error("Failed to fetch history:", error);
