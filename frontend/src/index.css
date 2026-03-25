@@ -108,6 +108,34 @@ body, html {
   gap: 1rem;
 }
 
+/* Mobile Responsiveness */
+@media (max-width: 640px) {
+  .top-nav {
+    padding: 0 1rem;
+  }
+  
+  .nav-center {
+    gap: 0.5rem;
+  }
+
+  .user-profile span {
+    display: none; /* Hide email on small screens */
+  }
+
+  .nav-link {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.75rem;
+  }
+  
+  .logo-text {
+    font-size: 1rem;
+  }
+
+  .dashboard-main {
+    padding: 1rem;
+  }
+}
+
 .user-profile {
   display: flex;
   align-items: center;
