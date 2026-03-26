@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { LogIn, Mail } from 'lucide-react';
+import '../styles/Login.css';
 
 export default function Login() {
   const [isSignUp, setIsSignUp] = useState(false);

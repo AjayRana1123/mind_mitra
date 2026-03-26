@@ -1,0 +1,73 @@
+.analytics-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem 1.5rem 2rem;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.analytics-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.analytics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.analytics-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+}
+
+.chart-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 1.5rem;
+}
+
+.counselor-alert {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(248, 81, 73, 0.2);
+  background-color: rgba(248, 81, 73, 0.05);
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+@media (max-width: 640px) {
+  .analytics-main {
+    padding: 1rem;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .chart-card {
+    padding: 1rem;
+  }
+  .analytics-header h1 {
+    font-size: 1.5rem;
+  }
+}

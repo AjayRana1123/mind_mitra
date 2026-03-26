@@ -5,6 +5,9 @@ import { ArrowLeft, AlertCircle, Smile, Meh, Frown, BarChart2, Zap, LogOut, Mess
 import { getAuth, signOut } from 'firebase/auth';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
 
+import Navbar from './Navbar';
+import '../styles/Analytics.css';
+
 export default function Analytics({ user }) {
   const [history, setHistory] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -92,33 +95,8 @@ export default function Analytics({ user }) {
   };
 
   return (
-    <div className="app-container">
-      {/* Top Navigation */}
-      <nav className="top-nav">
-        <div className="nav-left">
-          <div style={{ color: '#818CF8' }}><Zap size={24} fill="#818CF8" /></div>
-          <span className="logo-text">MindMitra</span>
-        </div>
-        
-        <div className="nav-center">
-            <button className="nav-link" onClick={() => navigate('/dashboard')}>
-                <MessageSquare size={18} /> Chat
-            </button>
-            <button className="nav-link analytics" onClick={() => navigate('/analytics')}>
-                <BarChart2 size={18} /> Analytics
-            </button>
-        </div>
-
-        <div className="nav-right">
-          <div className="user-profile">
-            <span>{user.email?.split('@')[0] || "User"}</span>
-            <div className="avatar">{user.email?.[0].toUpperCase() || "U"}</div>
-          </div>
-          <button className="btn-icon" onClick={handleLogout} title="Logout">
-            <LogOut size={18} />
-          </button>
-        </div>
-      </nav>
+    <>
+      <Navbar user={user} />
 
       <main className="dashboard-main" style={{ overflowY: 'auto' }}>
         <div style={{ width: '100%', maxWidth: '1000px', margin: '0 auto' }}>
@@ -219,6 +197,6 @@ export default function Analytics({ user }) {
           )}
         </div>
       </main>
-    </div>
+    </>
   );
 }

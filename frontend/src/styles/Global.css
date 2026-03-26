@@ -43,17 +43,6 @@ body, html {
   overscroll-behavior: none;
 }
 
-/* Loading Screen */
-.loading-screen {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--primary);
-}
-
 /* Custom Scrollbar */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: transparent; }

@@ -1,0 +1,160 @@
+/* Login Page Theming (Matching Chatbox) */
+.login-page-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(20px) !important;
+  color: var(--text) !important;
+  border-radius: 2rem !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
+  padding: 3rem !important;
+  width: 90% !important;
+  max-width: 450px !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.login-card .title {
+  font-size: 2.5rem !important;
+  font-weight: 800 !important;
+  text-align: center !important;
+  margin-bottom: 0.5rem !important;
+  background: linear-gradient(135deg, #818CF8, #C084FC) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.login-card .subtitle {
+  color: var(--text-muted) !important;
+  text-align: center !important;
+  margin-bottom: 2.5rem !important;
+  font-size: 1rem !important;
+}
+
+.login-card .input-field {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  border-radius: 1rem !important;
+  padding: 1rem 1.25rem !important;
+  width: 100% !important;
+  margin-top: 0.5rem !important;
+  font-size: 1rem !important;
+  transition: all 0.3s !important;
+}
+
+.login-card .input-field:focus {
+  border-color: #818CF8 !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 4px rgba(129, 140, 248, 0.15) !important;
+}
+
+.login-card label {
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  color: #818CF8 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  margin-left: 0.5rem !important;
+}
+
+.login-card .form-group {
+  margin-bottom: 1.5rem !important;
+}
+
+.login-card .btn-primary {
+  background: var(--accent-gradient) !important;
+  color: white !important;
+  width: 100% !important;
+  padding: 1rem !important;
+  border-radius: 1rem !important;
+  font-weight: 700 !important;
+  border: none !important;
+  cursor: pointer !important;
+  margin-top: 1.5rem !important;
+  font-size: 1.1rem !important;
+  transition: all 0.3s !important;
+  box-shadow: 0 10px 20px -5px rgba(236, 72, 153, 0.4) !important;
+}
+
+.login-card .btn-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 15px 25px -5px rgba(236, 72, 153, 0.5) !important;
+}
+
+.login-card .auth-switch {
+  background: none !important;
+  border: none !important;
+  color: var(--text-muted) !important;
+  font-size: 0.9rem !important;
+  width: 100% !important;
+  margin-top: 1.5rem !important;
+  cursor: pointer !important;
+  transition: color 0.2s !important;
+}
+
+.login-card .auth-switch:hover {
+  color: white !important;
+}
+
+.login-card .divider {
+  display: flex !important;
+  align-items: center !important;
+  text-align: center !important;
+  color: var(--text-muted) !important;
+  font-size: 0.75rem !important;
+  margin: 2rem 0 !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.1em !important;
+}
+
+.login-card .divider::before,
+.login-card .divider::after {
+  content: '' !important;
+  flex: 1 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.login-card .divider::before { margin-right: 1.5rem !important; }
+.login-card .divider::after { margin-left: 1.5rem !important; }
+
+.login-card .btn-google {
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 1rem !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding: 0.875rem !important;
+  border-radius: 1rem !important;
+  cursor: pointer !important;
+  font-weight: 600 !important;
+  color: white !important;
+  transition: all 0.3s !important;
+}
+
+.login-card .btn-google:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+@media (max-width: 640px) {
+  .login-card {
+    padding: 2rem !important;
+  }
+  .login-card .title {
+    font-size: 2rem !important;
+  }
+}

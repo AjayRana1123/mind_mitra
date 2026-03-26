@@ -18,6 +18,9 @@ import {
   Zap
 } from 'lucide-react';
 
+import Navbar from './Navbar';
+import '../styles/Dashboard.css';
+
 export default function Dashboard({ user }) {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
@@ -165,30 +168,8 @@ export default function Dashboard({ user }) {
   };
 
   return (
-    <div className="app-container">
-      {/* Top Navigation */}
-      <nav className="top-nav">
-        <div className="nav-left">
-          <div style={{ color: '#818CF8' }}><Zap size={24} fill="#818CF8" /></div>
-          <span className="logo-text">MindMitra</span>
-        </div>
-        
-        <div className="nav-center">
-          <button className="nav-link analytics" onClick={() => navigate('/analytics')}>
-            <BarChart2 size={18} /> Analytics
-          </button>
-        </div>
-
-        <div className="nav-right">
-          <div className="user-profile">
-            <span>{user.email?.split('@')[0] || "User"}</span>
-            <div className="avatar">{user.email?.[0].toUpperCase() || "U"}</div>
-          </div>
-          <button className="btn-icon" onClick={handleLogout} title="Logout">
-            <LogOut size={18} />
-          </button>
-        </div>
-      </nav>
+    <>
+      <Navbar user={user} />
 
       {/* Main Content */}
       <main className="dashboard-main">
@@ -281,6 +262,6 @@ export default function Dashboard({ user }) {
           </button>
         </form>
       </main>
-    </div>
+    </>
   );
 }
